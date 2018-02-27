@@ -23,7 +23,7 @@ class Employee():
 
 Takeo = Employee('Takeo', 'Ischi', 70)
 Franzl = Employee('Franzl', 'Lang', 85)
-Adam = Employee('Adam', 'Inthapanya', 20)
+Adam = Employee('Adam', 'Inthapanya', 25)
 
 
 def lastName(arg='lastName'):  # TreeSet Lastname
