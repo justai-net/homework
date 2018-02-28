@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Enter names in the fields, then click "Submit" to submit the form:</p>
+
+<form id="frm1">
+  First name: <input type="text" name="fname"><br>
+  Last name: <input type="text" name="lname"><br><br>
+  <input type="button" onclick="hide(1)" value="Next">
+</form>
+<form id="frm2" style="visibility: hidden;">
+  Age: <input type="text" name="age"><br>
+  Gender: <input type="text" name="gender"><br><br>
+  <input type="button" onclick="hide(2)" value="Next">
+</form>
+<p id="output"></p>
+
+<script>
+var details = []
+function hide(x){
+    if (x == 1){
+        document.getElementById("frm1").style.visibility="hidden";
+        details.push(document.getElementById("frm1").fname.value);
+        details.push(document.getElementById("frm1").lname.value);
+        document.getElementById("frm2").style.visibility="visible";
+    }
+    if (x == 2){
+        document.getElementById("frm2").style.visibility="hidden";
+        details.push(document.getElementById("frm2").gender.value);
+        details.push(document.getElementById("frm2").age.value);
+        document.getElementById("output").innerHTML = details;
+    }
+}
+</script>
+
+</body>
+</html>
